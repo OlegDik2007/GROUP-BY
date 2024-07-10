@@ -1,0 +1,15 @@
+SELECT sex,
+       count(sex) as couriers_count
+FROM   couriers
+WHERE  sex = 'male'
+    or sex = 'female'
+GROUP BY sex
+ORDER BY sex asc
+
+
+
+SELECT sex,
+       count(courier_id) as couriers_count
+FROM   couriers
+GROUP BY sex
+ORDER BY couriers_count
